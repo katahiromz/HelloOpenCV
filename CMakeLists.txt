@@ -42,6 +42,7 @@ elseif (MSVC)
 endif()
 
 ##############################################################################
+# OpenCV
 
 if (MSVC)
     set(OpenCV_DIR "C:/opencv/build")
@@ -52,10 +53,8 @@ find_package(OpenCV REQUIRED)
 
 ##############################################################################
 
-# executable
+# HelloOpenCV.exe
 add_executable(HelloOpenCV HelloOpenCV.cpp)
-
-# link
 target_link_libraries(HelloOpenCV ${OpenCV_LIBS})
 
 ##############################################################################
