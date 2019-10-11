@@ -7,7 +7,7 @@
 cmake_minimum_required(VERSION 2.4)
 
 # project name and language
-project(HelloOpenCV CXX)
+project(OpenCVSamples CXX)
 
 # set output directory (build/)
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
@@ -53,8 +53,6 @@ find_package(OpenCV REQUIRED)
 
 ##############################################################################
 
-# HelloOpenCV.exe
-add_executable(HelloOpenCV HelloOpenCV.cpp)
-target_link_libraries(HelloOpenCV ${OpenCV_LIBS})
+subdirs(Hello CameraCapture1 CameraCapture2 ConvertMovie BuildMovie)
 
 ##############################################################################
